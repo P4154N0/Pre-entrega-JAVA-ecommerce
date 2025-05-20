@@ -1,5 +1,7 @@
 package ecommerceprojecthpg;
 
+//  Author: H.P.G.
+
 //  Clase base Articulo con encapsulamiento.
 //  Base class Article with encapsulation.
 public class Article {
@@ -9,13 +11,15 @@ public class Article {
     private int id;
     private String name;
     private double price;
+    private int stock;
 
     //  Constructor para inicializar el objeto Articulo.
     //  Constructor to initialize the Article object.
-    public Article(int id, String name, double price) {
+    public Article(int id, String name, double price, int stock) {
         this.id = id;   //  'this' refiere al atributo del mismo objeto. 'this' refers to the attribute of the same object.
         this.name = name;
         this.price = price;
+        this.stock = stock;
     }
     
     //  Getter para el atributo id (solo lectura)
@@ -35,6 +39,12 @@ public class Article {
     public double getPrice() {
         return price;
     }
+
+    //  Getter para el atributo stock (solo lectura)
+    //  Getter for the stock attribute (read-only)
+    public int getStock() {
+        return stock;
+    }    
 
     //  Setter para modificar el id
     //  Setter to modify the id
@@ -58,11 +68,18 @@ public class Article {
         this.price = price;
     }
 
+    //  Setter para modificar el stock
+    //  Setter to modify the stock
+    public void setPrice(int stock) {
+        this.stock = stock;
+    }
+
+
     //  Método para mostrar la informacion del artículo.
     //  Method to display article information.
     public void show() {
         //  Este método puede ser sobrescrito por subclases (polimorfismo)
         //  This method can be overridden by subclasses (polymorphism)
-        System.out.println("ID: " + id + " | Nombre: " + name + " | Precio: $" + price);
+        System.out.println("ID: " + id + " | Nombre: " + name + " | Precio: $" + price + " | Stock: " + stock);
     }
 }

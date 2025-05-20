@@ -1,5 +1,7 @@
 package ecommerceprojecthpg;
 
+//  Author: H.P.G.
+
 public class App {
 
     public static void main(String[] args) {
