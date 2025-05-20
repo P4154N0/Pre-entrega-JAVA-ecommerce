@@ -64,7 +64,7 @@ public class Data {
     }
 
     //  
-    public void modifyAnArticle(int id, String newName, Double newPrice) {
+    public void modifyAnArticle(int id, String newName, Double newPrice, Integer newStock) {
         for (Article article : listOfArticles) {
             if (article.getId() == id) {
                 if (newName != null) {
@@ -72,6 +72,9 @@ public class Data {
                 }
                 if (newPrice != null) {
                     article.setPrice(newPrice);
+                }
+                if (newStock != null) {
+                    article.setStock(newStock);
                 }
                 return; // Importante: Salir del método después de modificar el artículo
             }

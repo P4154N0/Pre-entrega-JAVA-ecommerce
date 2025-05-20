@@ -70,11 +70,11 @@ public class Article {
 
     //  Setter para modificar el stock
     //  Setter to modify the stock
-    public void setPrice(int stock) {
+    public void setStock(int stock) {
         this.stock = stock;
     }
 
-
+    
     //  Método para mostrar la informacion del artículo.
     //  Method to display article information.
     public void show() {

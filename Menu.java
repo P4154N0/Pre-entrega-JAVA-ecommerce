@@ -102,6 +102,8 @@ public class Menu {
         String name = sc.nextLine();
         System.out.print("Precio: $");
         double price = sc.nextDouble();
+        System.out.print("Stock");
+        int stock = sc.nextInt();
         sc.nextLine();
 
         //-------------------------------------------------------------------------
@@ -120,7 +122,7 @@ public class Menu {
             System.out.println("El Artículo " + id + " ya existe!");
             System.out.println("Pruebe con un ID igual o superio a: " + (maxID+1));
         } else {
-            Article newArticle = new Article(id, name, price);
+            Article newArticle = new Article(id, name, price, stock);
             data.addArticulo(newArticle);
             System.out.println("Artículo agregado con exito!");
             System.out.println("--------------------------------------------------");
@@ -157,7 +159,9 @@ public class Menu {
         String name = sc.nextLine();
         System.out.println("Precio: $");
         double price = sc.nextDouble();
-        data.modifyAnArticle(id, name, price);
+        System.out.print("Stock");
+        int stock = sc.nextInt();
+        data.modifyAnArticle(id, name, price, stock);
         System.out.println("--------------------------------------------------");
     }
 
