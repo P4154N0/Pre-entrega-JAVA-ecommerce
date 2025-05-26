@@ -1,4 +1,4 @@
-package ecommerceprojecthpg;
+package com.hpglab.menus;
 
 import java.io.IOException;
 
